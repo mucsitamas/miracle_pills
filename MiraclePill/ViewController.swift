@@ -10,14 +10,24 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var pillImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var fullNameField: UITextField!
+    @IBOutlet weak var streetAddressLabel: UILabel!
+    @IBOutlet weak var streetAddressField: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityField: UITextField!
+    @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var statePickerButton: UIButton!
     @IBOutlet weak var statePicker: UIPickerView!
-    
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryField: UITextField!
-    
     @IBOutlet weak var zipCodeLabel: UILabel!
     @IBOutlet weak var zipCodeField: UITextField!
+    @IBOutlet weak var buyNowButton: UIImageView!
     
     let states = ["Csongrád", "Békés", "Bács-kiskun", "Pest", "Heves", "Győr-moson-sopron", "Baranya"]
     
@@ -38,6 +48,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryField.isHidden = true
         zipCodeLabel.isHidden = true
         zipCodeField.isHidden = true
+    }
+    
+    @IBAction func buyNowButtonPressed(_ sender: Any) {
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
